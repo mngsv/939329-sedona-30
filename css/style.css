@@ -1,0 +1,128 @@
+/* Variables */
+
+:root {
+  --color-brow-default: #766357;
+  --color-brow-active: #503E33;
+  --color-pale-brow: #6A6A6A;
+  --color-brow-button: #503E33;
+  --color-blue: #81B3D2;
+  --color-blue-button: #669EC0;
+  --color-blue-active: #5496BD;
+  --color-dark-brow: #333333;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-grey: #EEEEEE;
+  --color-ligth-grey: #A9A9A9;
+  --color-ultra-light-grey: #CACACA;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  font-family: PT Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.main-header-title {
+  font-family: PT Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-family: PT Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.main-text-content {
+  font-family: PT Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.caption {
+  font-family: PT Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;;
+}
+
+.main-navigation a {
+  color: var(--color-black)
+}
+
+.main-navigation a {
+  text-decoration: none;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+
+/* User navigation */
+
+.site-navigation a:hover {
+  color: var(--color-blue);
+}
+
+.site-navigation a:focus {
+  color: var(--color-ultra-light-grey);
+}
+
+/* Features */
+
+.features-list {
+  list-style: none;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.benefits {
+  background-color: var(--color-blue);
+}
+
+.benefits .main-text-content, .main-title {
+  color: var(--color-white);
+}
+
+
+/* Contact */
+
+.footer-social {
+  font-family: PT Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+/* Social */
+
+.footer-social-list {
+  list-style: none;
+}
+
+.footer-social-item {
+  width: 46px;
+  height: 48px;
+  background-color: var(--color-blue);
+}
