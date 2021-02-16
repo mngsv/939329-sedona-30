@@ -3,10 +3,10 @@
 
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css"> 
     
     <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
@@ -23,153 +23,170 @@
 
   <body class="page-body">
 
+    <div class="index-grid">
 
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="image/logo.svg" width="138" height="70" alt="Логотип города Седона">
-        </a>
           <ul class="site-navigation">
-            <li class="list-navigation-item"><a href="#">Информация</a></li>
-            <li class="list-navigation-item"><a href="#">Фото и видео</a></li>
-            <li class="list-navigation-item"><a href="#">Карта штата</a></li>
-            <li class="list-navigation-item"><a href="catalog.html">Гостиницы</a></li>
+            <li class="list-navigation-item list-unstyled"><a href="#">Информация</a></li>
+            <li class="list-navigation-item list-unstyled"><a href="#">Фото и видео</a></li>
+            <li class="list-navigation-item list-unstyled"><a href="#">Карта штата</a></li>
+            <li class="list-navigation-item list-unstyled"><a href="catalog.html">Гостиницы</a></li>
           </ul>
+          <a class="main-header-logo">
+            <!--<img src="image/logo.svg" width="138" height="70" alt="Логотип города Седона">-->
+          </a>
       </nav>
 
     </header>
 
 
-    <main class="container">
+    <main class="main-container">
 
-      <div>      
-        <img src="image/main-background-photo.jpg" width="1200" height="509" alt="Каньон города Седона">    
+      <div class="logo-index">      
+        <!--<img  class="main-photo" src="image/main-background-photo.jpg" width="1200" height="509" alt="Каньон города Седона">-->
+        <!--<img class="logo-welcome" src="image/welcome.svg" alt="Добро пожаловать в город Седона" width="456" height="350">-->   
       </div>
 
-      <section class=features>
+      <section>
 
-        <article>
-          <h2 class="main-header-title">Седона - небольшой городок в аризоне,<br> заслуживающий большего!</h2>
-          <p class="main-text-content">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <article class="promo">
+          <h2 class="main-header-title text-center promo-content">Седона - небольшой городок в аризоне,<br> заслуживающий большего!</h2>
+          <p class="main-text-content text-center text-content">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </article>
 
-        <article class="benefits">
-          <h3 class="main-title">Настоящий городок</h3>
-          <p class="main-text-content">-№1-</p>
-          <p class="main-text-content">Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
-          <img src="image/city-of-sedona.jpg" width="800" height="256" alt="Фото города Седона">
+        <article class="main-card">
+          <div class="benefits">
+            <h3 class="main-title">Настоящий<br> городок</h3>
+            <p class="main-text-content">-№1-</p>
+            <p class="main-text-content">Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
+          </div>
+          <div>
+            <img src="image/city-of-sedona.jpg" width="800" height="256" alt="Фото города Седона">
+          </div>
         </article>
 
         <section class="features">
           <ul class="features-list">
-            <li class="feature-item">
-              <img src="#" width="75" height="72">
-              <h3 class="main-title">Жильё</h3>
+            <li class="feature-item list-unstyled text-center">
+              <img src="image/icon-house.svg" width="75" height="76">
+              <h3 class="features-title">Жильё</h3>
               <p class="main-text-content">Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
             </li>
-            <li class="feature-item">
-              <img src="#" width="75" height="70">
-              <h3 class="main-title">Еда</h3>
+            <li class="feature-item list-unstyled text-center">
+              <img src="image/icon-burger.svg" width="75" height="76">
+              <h3 class="features-title">Еда</h3>
               <p class="main-text-content">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
             </li>
-            <li class="feature-item">
-              <img src="#" width="64" height="76">
-              <h3 class="main-title">Суверниры</h3>
+            <li class="feature-item list-unstyled text-center">
+              <img src="image/icon-gifts.svg" width="75" height="76">
+              <h3 class="features-title">Суверниры</h3>
               <p class="main-text-content">Не только китайского, но и местного<br> производства!</p>
             </li>
           </ul>
         </section>
 
-        <article class="benefits">
-          <img src="image/devil's-bridge.jpg" width="800" height="256" alt="Мост Дьявола">
-          <h3 class="main-title">Там есть мост дьявола</h3>
-          <p class="main-text-content">-№2-</p>
-          <p class="main-text-content">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+        <article class="main-card">
+          <div>
+            <img src="image/devil's-bridge.jpg" width="800" height="256" alt="Мост Дьявола">
+          </div>
+          <div class="benefits">
+            <h3 class="main-title">Там есть мост дьявола</h3>
+            <p class="main-text-content">-№2-</p>
+            <p class="main-text-content">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+          </div>
         </article>
 
-        <article>
-          <h3 class="main-title">Небольшая<br> площадь</h3>
-          <p class="main-text-content">-№3-</p>
-          <p class="main-text-content">Все достопримечательности<br> находятся очень близко</p>
-        </article>  
+        <section class="features-block">
 
-        <article>
-          <h3 class="main-title">Красивая<br> дорога</h3>
-          <p class="main-text-content">-№4-</p>
-          <p class="main-text-content">Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
-        </article>
+          <article class="feature-item">
+            <h3 class="features-title">Небольшая<br> площадь</h3>
+            <p class="main-text-content">-№3-</p>
+            <p class="main-text-content">Все достопримечательности<br> находятся очень близко</p>
+          </article>  
 
-        <article>
-          <h3 class="main-title">Мало<br> туристов</h3>
-          <p class="main-text-content">-№5-</p>
-          <p class="main-text-content">Большинство едет в гранд каньон<br> и толпятся там</p>
-        </article>
+          <article class="feature-item">
+            <h3 class="features-title">Красивая<br> дорога</h3>
+            <p class="main-text-content">-№4-</p>
+            <p class="main-text-content">Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
+          </article>
+
+          <article class="feature-item">
+            <h3 class="features-title">Мало<br> туристов</h3>
+            <p class="main-text-content">-№5-</p>
+            <p class="main-text-content">Большинство едет в гранд Каньон<br>и толпятся там</p>
+
+          </article>
+
+        </section>  
 
       </section>
 
       <section class="search">
         <p class="caption">Заинтересовались?</p>
         <p class="main-text-content">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="search-house" type="button">
+          Поиск гостиницы в Седоне
+        </button>
       </section>
-
-      <button class="search-house" type="button">
-        Поиск гостиницы в Седоне
-      </button>
 
     </main>
 
 
     <footer class="main-footer">
 
+      <img src="image/map.jpg" width="1200" height="600" alt="Каньон на карте штата">
+
       <section class="footer-social">
-        <img src="image/map.jpg" width="1200" height="600" alt="Каньон на карте штата">
         <p >
           <a href=#>#VISITSEDONA</a><br>
           ТЕЛ: <a class="contacts-phone" href="tel:+7(495)6660166">+7(495)666-01-66</a>
         </p>
 
         <ul class="footer-social-list">
-          <li class="footer-social-item">
+          <li class="footer-social-item list-unstyled">
             <a class="social-button" href="#">
-              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="social-icon" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 
                 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 
                 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 
                 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 
                 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 
-                3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="#000"/>
+                3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="#ffffff"/>
               </svg>
             </a>
           </li>
-          <li class="footer-social-item">
+          <li class="footer-social-item list-unstyled">
             <a class="social-button" href="#">
-              <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="#000"/>
+              <svg class="social-icon" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="#ffffff"/>
               </svg>                
             </a>
           </li>
-          <li class="footer-social-item">
+          <li class="footer-social-item list-unstyled">
             <a class="social-button" href="#">
-              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="social-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 
-                16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="#000"/>
+                16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="#ffffff"/>
               </svg>                
             </a>
           </li>
         </ul>
 
-        <p>
+        <p class="copyright">
           WEBSITE BY
         </p>
         <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="image/logo-htmlacademy.svg" alt="Логотип школы онлайн-образования HTML Academy">
         </a>
-
       </section>
 
     </footer>
 
+    </div>
+
     <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>-->
+
 
   </body>
 </html>
