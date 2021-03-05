@@ -20,6 +20,7 @@
 }
 
 .page {
+  position: relative;
   height: 100%;
 }
 
@@ -38,23 +39,54 @@
   padding: 0 40px;
 }
 
+/*
 .main-header {
   display: grid;
   grid-column-start: 1;
   grid-column-end: 2;
   height: 56px;
 }
+*/
+
 .main-container {
   display: grid;
 }
 
 /* User navigation */
 
+
+
+
 .site-navigation {
-  display: flex;
-  justify-content: space-around;  
+ display: flex;
+ flex-wrap: wrap;
+ padding: 20px 0 20px 0;
+ align-items: center;
+ margin: 0;
 }
 
+.site-navigation li {
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.site-navigation li:last-child,
+.site-navigation li:nth-last-child(2) {
+  text-align: right;
+}
+
+.site-navigation li:last-child {
+  padding-right: 72px;
+}
+
+.site-navigation li:first-child {
+  padding-left: 72px;
+}
+
+.main-header .main-header-logo {
+  position: absolute;
+  left: 531px;
+}
 
 .site-navigation a:hover {
   color: var(--color-blue);
@@ -262,7 +294,7 @@
 
 /* Footer */
 
-.main-footer {
+.page .main-footer {
   display: grid;
   grid-template-rows: 1fr;
 }
@@ -283,7 +315,9 @@
 }
 
 .social-button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 6px;
   width: 46px;
   height: 48px;
@@ -355,4 +389,51 @@
 .more-card-button:active {
   background-color: var(--color-blue-active);
   color: var(--color-text-active);
+}
+
+
+
+/* ------ Catalog Styles ------ */
+
+
+.apartment-filters { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 1200px;
+  background-image: url(/image/background-photo-inner-page.jpg);
+  background-repeat: no-repeat;
+}
+
+.filters {
+  display: flex;
+  justify-self: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.filters fieldset {
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 50px;
+  width: 250px;
+  border: none;
+}
+
+.sort-button-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1200px;
+}
+
+.sort-price-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.select-house .card {
+  display: grid;
 }

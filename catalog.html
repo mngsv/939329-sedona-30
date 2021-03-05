@@ -36,7 +36,7 @@
               <li class="list-navigation-item list-unstyled"><a href="catalog.html">Гостиницы</a></li>
             </ul>
             <a class="main-header-logo">
-              <!--<img src="image/logo.svg" width="138" height="70" alt="Логотип города Седона">-->
+              <img src="image/logo.svg" width="138" height="70" alt="Логотип города Седона">
             </a>
         </nav>
   
@@ -45,65 +45,72 @@
 
     <main class="container">
 
-      <section class="apartment-filters">
-        <img src="image/background-photo-inner-page.jpg" width="1200" height="220">
-        <form action="GET" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Инфраструктура</legend>
-            <ul>
-              <li class="list-unstyled">
-                <input type="checkbox" name="options" id="pool" checked>
-                <label for="pool">Бассейн</label>
-              </li>
-              <li class="list-unstyled">
-                <input type="checkbox" name="options" id="parking">
-                <label for="parking">Парковка</label>
-              </li>
-              <li class="list-unstyled">
-                <input type="checkbox" name="options" id="wi-fi">
-                <label for="wi-fi">WI-FI</label>
-              </li>
-            </ul>
-          </fieldset>
+      <section>
 
-          <fieldset>
-            <legend>Тип жилья</legend>
-            <ul>
-              <li class="list-unstyled">
-                <input type="checkbox" name="house" id="hotel" checked>
-                <label for="hotel">Гостиница</label>
-              </li>
-              <li class="list-unstyled">
-                <input type="checkbox" name="house" id="motel" checked>
-                <label for="motel">Мотель</label>
-              </li>
-              <li class="list-unstyled">
-                <input type="checkbox" name="house" id="apartment" checked>
-                <label for="apartment">Апартаменты</label>
-              </li>
-            </ul>
-          </fieldset>
+        <div class="apartment-filters">
+        
+          <form class="filters" method="GET" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>Инфраструктура</legend>
+                <ul>
+                  <li class="list-unstyled">
+                    <input type="checkbox" name="options" id="pool" checked>
+                    <label for="pool">Бассейн</label>
+                  </li>
+                  <li class="list-unstyled">
+                    <input type="checkbox" name="options" id="parking">
+                    <label for="parking">Парковка</label>
+                  </li>
+                  <li class="list-unstyled">
+                    <input type="checkbox" name="options" id="wi-fi">
+                    <label for="wi-fi">WI-FI</label>
+                  </li>
+                </ul>
+            </fieldset>
 
-          <p>Стоимость в сутки(Р):</p>
-          <input type="number" placeholder="0">
-          <input type="number" placeholder="3000">
-          <div class="range"></div>
-          <button type="submit">Показать</button>
-        </form>
+            <fieldset>
+              <legend>Тип жилья</legend>
+                <ul>
+                  <li class="list-unstyled">
+                    <input type="checkbox" name="house" id="hotel" checked>
+                    <label for="hotel">Гостиница</label>
+                  </li>
+                  <li class="list-unstyled">
+                    <input type="checkbox" name="house" id="motel" checked>
+                    <label for="motel">Мотель</label>
+                  </li>
+                  <li class="list-unstyled">
+                    <input type="checkbox" name="house" id="apartment" checked>
+                    <label for="apartment">Апартаменты</label>
+                  </li>
+                </ul>
+            </fieldset>
+          
+          </form>
+
+          <div>
+            <p>Стоимость в сутки(Р):</p>
+            <input type="number" placeholder="0">
+            <input type="number" placeholder="3000">
+            <div class="range"></div>
+            <button type="submit">Показать</button>
+          </div>
+
+        </div>
 
         <div class="select-house">
-          
-          <p>Найдено:3</p>
+        
           <div class="sort-button-block">
+            <p>Найдено:3</p>
             <p>Сортировка:</p>
-            <ul>
+            <ul class="sort-price-btn">
               <li class="list-unstyled"><button href="?sort-price" type="submit">По цене</button></li>
               <li class="list-unstyled"><button href="?sort-price" type="submit">По типу</button></li>
               <li class="list-unstyled"><button href="?sort-price" type="submit">По типу</button></li>
             </ul>
           </div>
 
-          <article class="card card-table">
+          <article class="card">
             <img src="image/hotels/amara-resort.jpg" alt="Гостиница">
             <p class="card-name">
                 Amara Resort & Spa<br>
@@ -113,7 +120,7 @@
             <button class="card-button" type="submit">Забронировать</button>
           </аrticle>
 
-          <article class="card card-table">
+          <article class="">
             <img src="image/hotels/desert-quail.jpg" alt="Мотель">
             <p class="card-name">
                 Desert Quail Inn<br>
@@ -123,7 +130,7 @@
             <button class="card-button" type="submit">Забронировать</button>
           </article>
 
-          <article class="card card-table">
+          <article class="">
             <img src="image/hotels/villas-at-poco-diablo.jpg" alt="Апартаменты">
             <p class="card-name">
                 Villas at Poco Diablo<br>
