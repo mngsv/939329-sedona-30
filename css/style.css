@@ -16,20 +16,33 @@
   --color-ligth-grey: #A9A9A9;
   --color-ultra-light-grey: #CACACA;
   --color-text-active: rgba(255, 255, 255, 0.3);
+  --color-dark-white: #F2F2F2;
+  --color-dark-grey: #666666;
+  --color-form-grey: #EBEBEB;
   --main-font-family: PT Sans, Arial, sans-serif; 
 }
 
 .page {
-  position: relative;
   height: 100%;
 }
 
 .page-body {
-  font-family: var(--main-font-family);
-  text-transform: uppercase;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: var(--main-font-family);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--color-white);
   min-height: 100%;
+  min-width: 1200px; 
 }
 
 .index-grid {
@@ -39,21 +52,13 @@
   padding: 0 40px;
 }
 
-/*
-.main-header {
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  height: 56px;
-}
-*/
 
 .main-container {
   display: grid;
 }
 
-/* User navigation */
 
+/* User navigation */
 
 
 
@@ -85,7 +90,8 @@
 
 .main-header .main-header-logo {
   position: absolute;
-  left: 531px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .site-navigation a:hover {
@@ -100,6 +106,7 @@
   text-decoration: none;
   color: var(--color-black)
 }
+
 
 .promo {
   display: flex;
@@ -219,18 +226,18 @@
   color: rgba(255 ,255 ,255, 0.3)
 }
 
-.footer-social {
-  height: 120px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
-}
-
 .logo-index {
   width: 1200px;
   height: 509px;
   background:
     url(/image/welcome.svg) 50% 50% no-repeat,
     url(/image/main-background-photo.jpg) no-repeat;
+}
+
+.logo-index::after {
+  width: 1200px;
+  height: 57px;
+  background: url(image/header-ornament.svg) 50% 50% no-repeat;
 }
 
 /* Main navigation */
@@ -295,14 +302,25 @@
 /* Footer */
 
 .page .main-footer {
-  display: grid;
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.page .main-footer-img {
+  background-image: url(/image/map.jpg);
+
+  height: 597px;
 }
 
 .footer-social {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
@@ -313,6 +331,23 @@
 .footer-social-list {
   display: flex;
 }
+
+.footer-social .copyright {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.copyright .name-copyright-site {
+  margin-right: 8px;
+}
+
+.phone-block {
+  padding-top: 23px;
+}
+
 
 .social-button {
   display: flex;
@@ -338,7 +373,10 @@
   background-color: var(--color-blue-active);
 }
 
-
+.contacts-block a {
+  color: var(--color-black);
+  text-decoration: none;
+}
 
 /* Features */
 
@@ -350,75 +388,57 @@
   color: var(--color-white);
 }
 
-/* Contact */
-
-/* Styles Catalog */ 
-
-.card-button {
-  width: 142px;
-  height: 27px;
-  padding: auto;
-  color: var(--color-white);
-  background-color: var(--color-brow-default);
-  font-family: var(--main-font-family);
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-}
-
-.more-card-button {
-  width: 110px;
-  height: 27px;
-  padding: auto;
-  color: var(--color-white);
-  background-color: var(--color-blue);
-  font-family: var(--main-font-family);
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-}
-
-.more-card-button:hover {
-  background-color: var(--color-blue-button);
-}
-
-.more-card-button:active {
-  background-color: var(--color-blue-active);
-  color: var(--color-text-active);
-}
-
-
 
 /* ------ Catalog Styles ------ */
 
-
 .apartment-filters { 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  width: 1200px;
+  display: flex;
+  justify-content: space-around;
   background-image: url(/image/background-photo-inner-page.jpg);
   background-repeat: no-repeat;
 }
 
-.filters {
-  display: flex;
-  justify-self: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
 .filters fieldset {
-  padding: 0px;
-  margin: 0px;
+  padding-top: 20px;
+  margin-top: 20px;
   margin-bottom: 50px;
   width: 250px;
   border: none;
 }
+
+.filters ul {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+
+/* СheckBox Block */
+
+    /* Check */
+
+.check {
+  padding-right: 16px;
+}
+
+.check-input {
+  position: absolute;
+  appearance: none;
+}
+
+.check-box {
+  position: absolute;
+  margin-right: 36px;
+  width: 23px;
+  height: 23px;
+  background-image: url(/image/checkbox-on.svg);
+}
+
+
 
 .sort-button-block {
   display: flex;
@@ -437,3 +457,203 @@
 .select-house .card {
   display: grid;
 }
+
+
+/* Hotel Item */
+
+.card {
+  width: 1054px;
+  margin: 0 auto;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.hotels-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hotels-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.hotels-img {
+  width: 135px;
+  height: 90px;
+  margin-right: 30px;
+}
+
+.col-1 {
+  margin-right: auto;
+}
+
+.hotels-col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotels-stars {
+  margin-top: 0;
+  text-align: right;
+}
+
+.hotels-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  width: 110px;
+  height: 27px;
+  background-color: var(--color-dark-white);
+  color: var(--color-dark-grey);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.hotels-rating-icon {
+  display: inline-block;
+  width: 19px;
+  height: 17px;
+  background-image: url(/image/raiting-stars.svg);
+}
+
+.hotels-booking-btn {
+  width: 142px;
+  height: 27px;
+  padding: auto;
+  color: var(--color-white);
+  background-color: var(--color-brow-default);
+  font-family: var(--main-font-family);
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+}
+
+.hotels-details-btn {
+  display: inline-block;
+
+  width: 110px;
+  height: 24px;
+  padding-top: 3px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  font-family: var(--main-font-family);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.hotels-details-btn:hover {
+  background-color: var(--color-blue-button);
+}
+
+.hotels-details-btn:active {
+  background-color: var(--color-blue-active);
+  color: var(--color-text-active);
+}
+
+/* Modal */
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 568px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50%;
+  height: 395px;
+  background-color: var(--color-white);
+
+}
+
+.modal .modal-btn {
+  width: 458px;
+  height: 58px;
+  background-color: var(--color-blue);
+  outline-color: var(--color-blue);
+  border: none;
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.date-form input[type="text"] {
+  box-sizing: border-box;
+  width: 346px;
+  height: 38px;
+  padding-left: 13px;
+  border: var(--color-dark-white);
+  background-color: var(--color-dark-white);
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.date-form input[type="text"]:hover {
+  background-color: var(--color-form-grey);
+  outline-color: var(--color-form-grey);
+}
+
+.date-form input[type="text"]:active {
+  background-color: var(--color-white);
+  border-color: var(--color-form-grey);
+  outline-color: var(--color-form-grey);
+}
+
+.date-input {
+  margin-left: 5px;
+}
+
+.form-icon {
+
+}
+
+.date-form label { 
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: bold;
+  line-height: 26px;
+  padding-right: 20px; 
+  font-size: 14px;
+}
+
+
+.block-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 114px;
+  height: 38px;
+  background-color: var(--color-dark-white);
+}
+
+.main-switch-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-black);
+  font-weight: 700;
+}
+
