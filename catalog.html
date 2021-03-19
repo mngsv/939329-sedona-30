@@ -45,82 +45,78 @@
 
     <main class="container">
 
-      <section>
+        <form class="hostel-catalog" method="GET" action="https://echo.htmlacademy.ru">
+          <fieldset class="hostel-infrastructure">
+            <legend class="titleform">Инфраструктура:</legend>
+              <ul>
+                <li class="fea-re-item filter-option filter-checkbox">
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="pool" id="filter-pool" checked>
+                  <label class="filter"  for="filter-pool">Бассейн</label>
+                </li>
+                <li class="fea-re-item filter-option filter-checkbox">
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
+                  <label class="filter" for="filter-parking">Парковка</label>
+                </li>
+                <li class="fea-re-item filter-option filter-checkbox">
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="wifi" id="filter-wifi">
+                  <label class="filter" for="filter-wifi">Wi-Fi</label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="hostel-type">
+            <legend class="titleform">Тип-жилья:</legend>
+              <ul>
+                <li class="fea-re-item filter-option filter-checkbox">
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="hostel" id="filter-hotel" checked>
+                  <label class="filter" for="filter-hotel">Гостиница</label>
+                </li>
+                <li class="fea-re-item filter-option filter-checkbox">
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="motel" id="filter-motel" checked>
+                  <label class="filter" for="filter-motel">Мотель</label>
+                </li>
+                <li class="fea-re-item filter-option filter-checkbox">
+                  <input class="filter-input-checkbox filter-input" type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <label class="filter" for="filter-apartments">Апартаменты</label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend class="titleform">стоимость в сутки (Р):</legend>
+            <div class="price-controls">
+              <label for="minprice">
+                ОТ<input type="number" name="min-price" id="minprice" step="1" min="0" max="2999" placeholder="0">
+              </label>
+              <label for="maxprice">
+                ДО<input type="number" name="max-price" id="maxprice" step="1" min="1" max="3000" placeholder="3000">
+              </label>
+            </div>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 78%"></div>
+              </div>
+            </div>
+            <button class="button-show" type="submit">показать</button>
+          </fieldset>
+        </form>
 
-        <div class="apartment-filters">
-          <div>
-            <form class="filters" method="GET" action="https://echo.htmlacademy.ru">
-              <fieldset>
-                <legend>Инфраструктура:</legend>
-                  <ul class="list-unstyled">
-                    <li>
-                      <label class="check option" for="pool">
-                        <input class="check-input" type="checkbox" name="options" id="pool" checked>
-                        <span class="check-box"></span>
-                        Бассейн
-                      </label>
-                    </li>
-                    <li>
-                      <label class="check option" for="parking">
-                        <input class="check-input" type="checkbox" name="options" id="parking">
-                        <span class="check-box"></span>
-                        Парковка
-                      </label>
-                    </li>
-                    <li>
-                      <label class="check option" for="wi-fi">
-                        <input class="check-input" type="checkbox" name="options" id="wi-fi">
-                        <span class="check-box"></span>
-                        WI-FI
-                      </label>
-                    </li>
-                  </ul>
-              </fieldset>
-            </form>
-          </div>
-          <div>
-            <form class="filters" action="">
-              <fieldset>
-                <legend>Тип жилья:</legend>
-                  <ul class="list-unstyled">
-                    <li>
-                      <input type="checkbox" name="house" id="hotel" checked>
-                      <label for="hotel">Гостиница</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="house" id="motel" checked>
-                      <label for="motel">Мотель</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="house" id="apartment" checked>
-                      <label for="apartment">Апартаменты</label>
-                    </li>
-                  </ul>
-              </fieldset>
-            </form>
-          </div>
+        <section class="sorting">
+          <h3 class="sorting-title">Сортировка:</h3>
+          <p class="sorting-result">Найдено: 3</p>
+          <ul class="sorting-list">
+            <li><a class="sorting-item" href="blank.html">По цене</a></li>
+            <li><a class="sorting-item" href="blank.html">По типу</a></li>
+            <li><a class="sorting-item" href="blank.html">По рейтингу</a></li>
+          </ul>
+          <span></span><span></span>
+        </section>
 
-          <div>
-            <p>Стоимость в сутки(Р):</p>
-            <input type="number" placeholder="0">
-            <input type="number" placeholder="3000">
-            <div class="range"></div>
-            <button>Показать</button>
-          </div>
-
-        </div>
+        
 
         <div class="select-house">
-        
-          <div class="sort-button-block">
-            <p>Найдено:3</p>
-            <p>Сортировка:</p>
-            <ul class="sort-price-btn">
-              <li class="list-unstyled"><button>По цене</button></li>
-              <li class="list-unstyled"><button>По типу</button></li>
-              <li class="list-unstyled"><button>По типу</button></li>
-            </ul>
-          </div>
 
           <article class="card">
             <ul class="hotels-list">
@@ -223,8 +219,6 @@
 
 
         </div>
-
-      </section>   
 
     </main>
 
