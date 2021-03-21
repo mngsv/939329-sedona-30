@@ -144,6 +144,10 @@
   color: var(--color-white);
 }
 
+.main-card img {
+  display: flex;
+}
+
 .benefits {
   display: flex;
   flex-direction: column;
@@ -232,8 +236,8 @@
   width: 1200px;
   height: 509px;
   background:
-    url(/image/header-ornament.svg) 50% 100% no-repeat,
-    url(/image/welcome.svg) 50% 50% no-repeat,
+    url(../image/header-ornament.svg) 50% 100% no-repeat,
+    url(../image/welcome.svg) 50% 50% no-repeat,
     url(../image/main-background-photo.jpg) no-repeat;
 }
 
@@ -306,7 +310,7 @@
 }
 
 .page .main-footer-img {
-  background-image: url(/image/map.jpg);
+  background-image: url(../image/map.jpg);
 
   height: 597px;
 }
@@ -790,7 +794,7 @@
   display: inline-block;
   width: 19px;
   height: 17px;
-  background-image: url(/image/raiting-stars.svg);
+  background-image: url(../image/raiting-stars.svg);
 }
 
 .hotels-booking-btn {
@@ -853,6 +857,7 @@
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .appointment-item {
@@ -899,34 +904,34 @@
   text-transform: uppercase;
 }
 
-.but-call-arrival {
+.button-call-arrival {
   position: absolute;
   top: 56px;
   right: 55px;
   width: 22px;
   height: 23px;
-  border: 0px;
-  padding: 0px;
-  margin: 0px;
+  border: 0;
+  padding: 0;
+  margin: 0;
   outline: none;
   background-color: transparent;
   color: var(--color-ligth-grey);
 }
-.but-call-arrival:focus {
+.button-call-arrival:focus {
   color: var(--color-black);
 }
-.but-call-arrival:active {
+.button-call-arrival:active {
   color: var(--color-blue);
 }
-.but-call-departure {
+.button-call-departure {
   position: absolute;
   top: 121px;
   right: 55px;
   width: 22px;
   height: 23px;
-  border: 0px;
-  padding: 0px;
-  margin: 0px;
+  border: 0;
+  padding: 0;
+  margin: 0;
   outline: none;
   background-color: transparent;
 }
@@ -955,8 +960,8 @@
 .number {
   width: 458px;
   height: 38px;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -970,8 +975,8 @@
 }
 
 .item-number {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: var(--main-font-family);
   font-size: 14px;
   line-height: 26px;
@@ -981,16 +986,16 @@
 
 .adults-number {
   width: 226px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .adults-number label {
-  margin: 0px;
-  padding: 0px 41px 0px 0px;
+  margin: 0;
+  padding: 0 41px 0 0;
   font-family: var(--main-font-family);
   font-size: 14px;
   line-height: 26px;
@@ -998,30 +1003,30 @@
   color: var(--color-black);
 }
   
-.but-plus,
-.but-min {
+.button-plus,
+.button-min {
   width: 38px;
   height: 38px;
-  border: 0px;
-  padding: 0px;
-  margin: 0px;
+  border: 0;
+  padding: 0;
+  margin: 0;
   outline: none;
   background-color: var(--color-dark-white);
 }
-.but-min {
+.button-min {
   padding-bottom: 4px;
 }
 .childrens-number {
   width: 179px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .childrens-number label {
-  margin: 0px;
-  padding: 0px 27px 0px 0px;
+  margin: 0;
+  padding: 0 27px 0 0;
   font-family: var(--main-font-family);
   font-size: 14px;
   line-height: 26px;
@@ -1033,8 +1038,8 @@
   width: 38px;
   height: 38px;
   background-color: var(--color-dark-white);
-  border: 0px;
-  padding: 0px;
+  border: 0;
+  padding: 0;
   outline: none;
   text-align: center;
   font-family: var(--main-font-family);
@@ -1054,9 +1059,9 @@
 .button-search {
   width: 458px;
   height: 58px;
-  border: 0px;
+  border: 0;
   margin-top: 38px;
-  padding: 0px;
+  padding: 0;
   padding-left: 2px;
   outline: none;
   font-family: var(--main-font-family);
